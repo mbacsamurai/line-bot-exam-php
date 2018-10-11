@@ -21,34 +21,9 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			$messages = [
-				
-  'type'=> 'template',
-  'altText'=> 'this is a buttons template',
-  'template'=> {
-    'type'=> 'buttons',
-    'actions'=> [
-      {
-        'type'=> 'message',
-        'label'=> 'Action 1',
-        'text'=> 'Action 1'
-      },
-      {
-        'type'=> 'message',
-        'label'=> 'Action 2',
-        'text'=> 'Action 2'
-      },
-      {
-        'type'=> 'message',
-        'label'=> 'Action 3',
-        'text'=> 'Action 3'
-      }
-    ],
-    'title'=> 'Title',
-    'text'=> 'Text'
-  
-}
-			];
+			$messages = {"type": "text",
+    "text": "Hello, world!"
+		};
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
