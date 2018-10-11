@@ -32,7 +32,7 @@ if (!is_null($events['events'])) {
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
 			];
-			$post = json_encode("SAKDA");
+			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 			$ch = curl_init($url);
@@ -48,4 +48,4 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "OK";
+echo "OK2";
