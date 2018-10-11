@@ -21,8 +21,33 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			$messages = ['type' => 'text',
-    'text' => "Hello, world!"
+			$messages = [
+				
+  "type": "template",
+  "altText": "this is a buttons template",
+  "template": array(
+    "type": "buttons",
+    "actions": [
+      array(
+        "type": "message",
+        "label": "Action 1",
+        "text": "Action 1"
+      ),
+      array(
+        "type": "message",
+        "label": "Action 2",
+        "text": "Action 2"
+      ),
+      array(
+        "type": "message",
+        "label": "Action 3",
+        "text": "Action 3"
+      )
+    ],
+    "title": "Title",
+    "text": "Text"
+  )
+
 		];
 
 			// Make a POST Request to Messaging API to reply to sender
@@ -47,4 +72,4 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "OK3";
+echo "OK4";
