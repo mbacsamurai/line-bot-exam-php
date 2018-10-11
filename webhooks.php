@@ -44,7 +44,6 @@ if (!is_null($events['events'])) {
         'text'=> 'Action 3'
       }
     ],
-    'thumbnailImageUrl'=> 'SPECIFY_YOUR_IMAGE_URL',
     'title'=> 'Title',
     'text'=> 'Text'
   }
@@ -73,4 +72,4 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "OK2";
+echo "OK3";
