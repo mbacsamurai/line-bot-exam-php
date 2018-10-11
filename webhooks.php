@@ -22,9 +22,33 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$messages = [
-				'type'=> 'sticker',
-  				'packageId'=> '1',
-  				'stickerId'=> '2560'
+				{
+  'type'=> 'template',
+  'altText'=> 'this is a buttons template',
+  'template'=> {
+    'type'=> 'buttons',
+    'actions'=> [
+      {
+        'type'=> 'message',
+        'label'=> 'Action 1',
+        'text'=> 'Action 1'
+      },
+      {
+        'type'=> 'message',
+        'label'=> 'Action 2',
+        'text'=> 'Action 2'
+      },
+      {
+        'type'=> 'message',
+        'label'=> 'Action 3',
+        'text'=> 'Action 3'
+      }
+    ],
+    'thumbnailImageUrl'=> 'SPECIFY_YOUR_IMAGE_URL',
+    'title'=> 'Title',
+    'text'=> 'Text'
+  }
+}
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
