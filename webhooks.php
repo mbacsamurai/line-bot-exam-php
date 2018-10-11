@@ -22,7 +22,7 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$messages = [
-				{
+				
   'type'=> 'template',
   'altText'=> 'this is a buttons template',
   'template'=> {
@@ -46,7 +46,7 @@ if (!is_null($events['events'])) {
     ],
     'title'=> 'Title',
     'text'=> 'Text'
-  }
+  
 }
 			];
 
